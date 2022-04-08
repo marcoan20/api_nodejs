@@ -14,6 +14,15 @@ api.get('/:name' , async (req, res) => {
       console.log(data2)
       res.send(`
       <html>
+      <style>
+      body{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      </style>
         <body>
           <h1 style="color: blue">${data.data.name ? data.data.name : data.data.login}</h1>
           <img src=${data.data.avatar_url}/>
